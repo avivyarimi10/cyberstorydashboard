@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cyber Story Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>Cyber Story Tracker</h1>
+    <p>The month-to-month story of how security helps the business, rolled up by quarter.</p>
+  </div>
+  <div class="actions">
+    <button id="btn-sample" type="button">Load sample data</button>
+    <button id="btn-export" type="button">Export JSON</button>
+    <label class="btn" for="file-import">Import JSON</label>
+    <input id="file-import" type="file" accept="application/json" hidden>
+    <button id="btn-reset" type="button" class="ghost">Reset</button>
+  </div>
+</header>
+<nav class="tabs" role="tablist" aria-label="Views">
+  <button role="tab" data-tab="story" aria-selected="true">Monthly story</button>
+  <button role="tab" data-tab="metrics" aria-selected="false">Metrics</button>
+  <button role="tab" data-tab="asks" aria-selected="false">Asks</button>
+  <button role="tab" data-tab="quarter" aria-selected="false">Quarterly roll-up</button>
+</nav>
+<main id="view" tabindex="-1"></main>
+<footer class="foot">
+  <span id="save-status">Saved in this browser.</span>
+  <span>Your data stays on this device. Export JSON to back it up or move it.</span>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
