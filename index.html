@@ -6,14 +6,17 @@
 <title>Cyber Story Tracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="top">
   <div class="brand">
-    <h1>Cyber Story Tracker</h1>
-    <p>The month-to-month story of how security helps the business, rolled up by quarter.</p>
+    <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></span>
+    <div>
+      <h1>Cyber Story Tracker</h1>
+      <p>The month-to-month story of how security helps the business, rolled up by quarter.</p>
+    </div>
   </div>
   <div class="actions">
     <button id="btn-sample" type="button">Load sample data</button>
@@ -23,12 +26,12 @@
     <button id="btn-reset" type="button" class="ghost">Reset</button>
   </div>
 </header>
-<nav class="tabs" role="tablist" aria-label="Views">
+<div class="tabbar"><nav class="tabs" role="tablist" aria-label="Views">
   <button role="tab" data-tab="story" aria-selected="true">Monthly story</button>
   <button role="tab" data-tab="metrics" aria-selected="false">Metrics</button>
   <button role="tab" data-tab="asks" aria-selected="false">Asks</button>
   <button role="tab" data-tab="quarter" aria-selected="false">Quarterly roll-up</button>
-</nav>
+</nav></div>
 <main id="view" tabindex="-1"></main>
 <footer class="foot">
   <span id="save-status">Saved in this browser.</span>
